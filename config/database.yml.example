@@ -1,0 +1,25 @@
+production:
+  adapter: mysql2
+  username: user
+  database: openmrs_1_9
+  password: your_password
+  host: localhost
+  pool: 500
+
+development:
+  adapter: mysql2
+  username: username
+  database: openmrs_1_9
+  password: your_password
+  host: localhost
+  pool: 500
+
+test: &TEST
+  adapter: mysql
+  database: username
+  username: openmrs_1_9
+  password: your_password
+  host: localhost
+
+cucumber:
+  <<: *TEST
